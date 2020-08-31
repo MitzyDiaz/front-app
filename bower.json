@@ -1,0 +1,16 @@
+{
+    "name": "app-front-end",
+    "description": "Aplicacion de front end test",
+    "main": "index.html",
+    "dependencies": {
+        "polymer": "Polymer/polymer#^2.0.0",
+        "front-encabezado": "https://github.com/MitzyDiaz/front-encabezado.git#1.0.0",
+        "front-test": "https://github.com/MitzyDiaz/front-test.git#1.0.2",
+        "front-list": "https://github.com/MitzyDiaz/front-list.git#1.0.1",
+        "app-storage": "https://github.com/PolymerElements/app-storage.git#v2.1.1"
+    },
+    "devDependencies": {
+        "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+        "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0"
+    }
+}

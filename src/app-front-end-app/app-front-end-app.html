@@ -1,0 +1,56 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+<link rel="import" href="../../bower_components/front-encabezado/front-encabezado.html">
+<link rel="import" href="../../bower_components/front-test/front-test.html">
+<link rel="import" href="../../bower_components/front-list/front-list.html">
+
+
+<dom-module id="app-front-end-app">
+    <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    
+    <front-encabezado></front-encabezado>
+    <front-test style="color: black;" collection="{{collection}}"></front-test>
+    <front-list collection="{{collection}}"></front-list>
+  </template>
+
+    <script>
+        /**
+         * @customElement
+         * @polymer
+         */
+        class AppFrontEndApp extends Polymer.Element {
+            static get is() {
+                return 'app-front-end-app';
+            }
+            static get properties() {
+                return {
+                    prop1: {
+                        type: String,
+                        value: 'app-front-end-app'
+                    },
+                    collection: {
+                        type: Array,
+                        value: function() {
+                            return [];
+                        }
+                    },
+                };
+            }
+            static get observers() {
+                return [
+                    'collectionChanged(collection.*)'
+                ]
+            }
+            collectionChanged() {
+                console.log(this.collection);
+            }
+        }
+
+        window.customElements.define(AppFrontEndApp.is, AppFrontEndApp);
+    </script>
+</dom-module>
