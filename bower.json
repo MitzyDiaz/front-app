@@ -4,9 +4,9 @@
     "main": "index.html",
     "dependencies": {
         "polymer": "Polymer/polymer#^2.0.0",
-        "front-encabezado": "https://github.com/MitzyDiaz/front-encabezado.git#1.0.0",
-        "front-test": "https://github.com/MitzyDiaz/front-test.git#1.0.2",
-        "front-list": "https://github.com/MitzyDiaz/front-list.git#1.0.1",
+        "front-encabezado": "https://github.com/MitzyDiaz/front-encabezado.git#1.0.1",
+        "front-test": "https://github.com/MitzyDiaz/front-test.git#1.0.3",
+        "front-list": "https://github.com/MitzyDiaz/front-list.git#1.0.2",
         "app-storage": "https://github.com/PolymerElements/app-storage.git#v2.1.1"
     },
     "devDependencies": {

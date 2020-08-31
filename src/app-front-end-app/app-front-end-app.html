@@ -2,7 +2,7 @@
 <link rel="import" href="../../bower_components/front-encabezado/front-encabezado.html">
 <link rel="import" href="../../bower_components/front-test/front-test.html">
 <link rel="import" href="../../bower_components/front-list/front-list.html">
-
+<link rel="import" href="../../bower_components/app-storage/app-localstorage/app-localstorage-document.html">
 
 <dom-module id="app-front-end-app">
     <template>
@@ -11,9 +11,8 @@
         display: block;
       }
     </style>
-
-    
-    <front-encabezado></front-encabezado>
+    <app-localstorage-document key="front.list.prueba" data="{{collection}}"></app-localstorage-document>
+    <front-encabezado></front-encabezado></div>
     <front-test style="color: black;" collection="{{collection}}"></front-test>
     <front-list collection="{{collection}}"></front-list>
   </template>
@@ -39,6 +38,11 @@
                             return [];
                         }
                     },
+                    encendido: {
+                        type: Boolean,
+                        value: false,
+                        notify: true
+                    }
                 };
             }
             static get observers() {
@@ -49,8 +53,13 @@
             collectionChanged() {
                 console.log(this.collection);
             }
+            algo2(e) {
+                if (e.detail.value) {
+                    this.encendido = true;
+                    console.log(this.encendido);
+                }
+            }
         }
-
         window.customElements.define(AppFrontEndApp.is, AppFrontEndApp);
     </script>
 </dom-module>
